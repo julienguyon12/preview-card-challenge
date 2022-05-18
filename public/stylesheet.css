@@ -1,0 +1,242 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Poppins&display=swap");
+
+/* css variables */
+:root {
+  --primaryColor: #3fd0d4;
+  --mainWhite: hsl(0, 0%, 100%);
+  --paragrapheWhite: hsla(0, 0%, 100%, 0.75);
+  --headingsWhite: hsla(0, 0%, 100%, 0.6);
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainVeryDarkBlue: hsl(233, 47%, 7%);
+  --mainDarkBlue: hsl(244, 38%, 16%);
+  --mainSoftViolet: hsl(277, 64%, 61%);
+  --mainFilterViolet: hsla(277, 64%, 61%, 0.3);
+}
+
+/* reset */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  background: var(--mainVeryDarkBlue);
+  font-size: 15px;
+}
+
+/*************** global styles ***************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--mainWhite);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--paragrapheWhite);
+  padding-right: 20px;
+}
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .foot {
+    bottom: 15px;
+    display: flex;
+    column-gap: 25px;
+  }
+}
+.violet {
+  color: var(--mainSoftViolet);
+}
+
+/* more global styles */
+
+/* buttons */
+
+/* section */
+
+/* title */
+
+/*************** end of global styles ***************/
+.center-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 70%;
+}
+.card {
+  display: flex;
+  width: 70%;
+  background: var(--mainDarkBlue);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/*************** partie gauche card ***************/
+.main-container-gauche {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 2% 0% 2%;
+}
+
+/*************** fin partie gauche card ***************/
+.foot {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  column-gap: 40px;
+}
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .foot {
+    bottom: 10px;
+    display: flex;
+    column-gap: 20px;
+  }
+}
+@media (max-width: 850px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  .foot {
+    bottom: 5px;
+    display: flex;
+    column-gap: 10px;
+  }
+}
+@media (max-width: 750px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.6rem;
+  }
+  .foot {
+    bottom: 0px;
+    display: flex;
+    column-gap: 5px;
+  }
+}
+/*************** image ***************/
+.container-image {
+  position: relative;
+  width: 100%;
+}
+.image-bureau {
+  width: 100%;
+  max-width: 680px;
+  height: 100%;
+  filter: opacity(50%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.filter {
+  position: absolute;
+  top: 0;
+  background: var(--mainFilterViolet);
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+@media (max-width: 650px) {
+  .card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    width: 50%;
+    border-radius: 10px;
+  }
+  .image-bureau {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+  }
+  .filter {
+    width: 100%;
+    height: 98.5%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+  }
+  .main-container-gauche {
+    height: 280px;
+  }
+  .foot {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    column-gap: 0px;
+  }
+  h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 00.5rem;
+    padding-right: 0px;
+    font-size: 0.7rem;
+  }
+}
+/*************** fin de image***************/
+
+/* CSS */
